@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react'; 
-import SortDropdown from './dropdown';
+import SortDropdown from '../../components/dropdown';
+import Searchbar from '../../components/Searchbar';
 import { client } from '../../../sanity/lib/client';
 import Image from 'next/image';
 import { BiSearch } from 'react-icons/bi';
@@ -74,33 +75,23 @@ const BestSelling = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-col m-auto items-center">
+    <div className="pt-64 bg-gradient-to-r from-black via-stone-900 to-black">
+      <div className="flex flex-col m-auto items-center ">
         <h2 className="text-4xl lg:text-[52px] text-[#db6e3b] font-semibold mb-8 text-center">Best Selling Products</h2>
 
         <section className="w-[350px] lg:w-[900px] xl:w-[1300px] md:w-[600px] flex-col relative">
-          <div className="flex justify-between items-center mb-2">
-            {/* Search Bar */}
+         
+          <div className="flex justify-between items-center mb-4">
+           {/* Search bar */}
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchQuery}
-                  onChange={handleSearchChange}
-                  className="rounded-full border border-gray-300 py-2 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                />
-                <BiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-              </div>
+               <Searchbar searchQuery={searchQuery} handleSearchChange={handleSearchChange} />
             </div>
-
-            {/* Sort Dropdown */}
+            {/* Dropdown */}
             <div className="flex justify-end relative">
               <SortDropdown />
             </div>
           </div>
 
-          {/* Loading Animation */}
           {loading ? (
             <div className="flex justify-center items-center h-64">
               <div className="loader"></div> {/* You can replace this with your loader component */}
@@ -114,16 +105,16 @@ const BestSelling = () => {
               {currentProducts.map((collection, idx) => (
                 <div
                   key={idx}
-                  className="p-4 flex flex-col items-center justify-center bg-gradient-to-tr from-black to-gray-50 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+                  className="p-4 flex flex-col items-center justify-center bg-gradient-to-tr from-black to-stone-900 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
                 >
                   <div className="h-[320px] overflow-hidden rounded-t-lg">
                     <Image
-                      className="h-[400px] overflow-hidden"
+                      className="h-[300px] overflow-hidden"
                       src={collection.imageUrl}
                       alt={collection.name}
                       width={460}
                       height={460}
-                      layout="responsive"
+                      layout="fit"
                       objectFit="cover"
                     />
                   </div>
@@ -155,7 +146,7 @@ const BestSelling = () => {
             </div>
           )}
 
-          <div className="flex justify-between mt-8">
+          <div className="flex justify-between my-8 ">
             <button
               onClick={handlePreviousPage}
               disabled={currentPage === 1}

@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from "next/image"; // Only if you're using Image component elsewhere
-import HomePage from './components/Home/home';
-import Welcome from './components/Home/welcome'
-import Values from './components/Home/values'
-import BestSelling from './components/Home/best-selling'
-import  Collection  from './components/Home/collections';
-import Articles from './components/Home/latest-articles'
+import HomePage from './pages/Home/home';
+import Welcome from './pages/Home/welcome'
+import Values from './pages/Home/values'
+import BestSelling from './pages/Home/best-selling'
+import  Collection  from './pages/Home/collections';
+import Articles from './pages/Home/latest-articles'
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="bg-black">
        <Image
           src="/images/bg-image.png" // Correct path after moving to public
           alt="Victory Fragrance"

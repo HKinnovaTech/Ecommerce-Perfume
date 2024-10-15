@@ -36,7 +36,7 @@ const Collections = () => {
       <h2 className="text-[52px] font-semibold text-[#db6e3b] mb-12 text-center">Our Collection</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto rounded-lg">
         {collections.map((collection, idx) => (
-          <div key={idx} className={`${boxStyle} ${idx === 1 ? 'md:col-span-2' : ''}`}>
+          <div key={idx} className={`${boxStyle} ${idx === 1 ? 'lg:col-span-2 md:col-span-1 ' : ''}`}>
             <div className="">
             {collection.images.map((image, i) => (
               <div key={i} className={"h-[400px] overflow-hidden rounded-t-lg"}>
@@ -51,7 +51,7 @@ const Collections = () => {
                 />
               </div>
             ))}
-            <h2 className="w-full text-[16px] rounded-b-lg md:text-[18px] font-semibold bg-gray-700 text-white text-center p-2 z-20">
+            <h2 className="w-full text-[16px] rounded-b-lg md:text-[18px] font-semibold bg-stone-700 text-white text-center p-2 z-20">
                   {collection.title}
                 </h2>
           </div>

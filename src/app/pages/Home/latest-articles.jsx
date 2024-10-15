@@ -5,6 +5,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { client } from '../../../sanity/lib/client';
+import Readmore from '../../components/readmore-button';
+
 import Image from 'next/image';
 
 const LeftArrow = (props) => {
@@ -56,13 +58,13 @@ const Articles = () => {
     nextArrow: <RightArrow />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
         },
@@ -78,21 +80,23 @@ const Articles = () => {
   };
 
   return (
-    <div className="py-32 bg-black overflow-hidden">
+    <div className="py-16 md:py-32 bg-black overflow-hidden">
       <h2 className="md:text-[52px] text-[46px] text-[#db6e3b] font-semibold mb-16 text-center">Latest Articles</h2>
-      <div className="relative max-w-6xl mx-auto">
-        <Slider {...settings} className="flex relative items-center justify-center pl-1">
+      <div className="">
+        <Slider {...settings} className="relative w-[900px] xl:w-[1200px] lg:w-[800px] md:w-[700px] flex justify-center items-center mx-auto">
           {articles.map((article, idx) => (
-            <div key={idx}>
-              <div className="w-[375px] h-[375px] relative mb-4 ">
+            <div key={idx} className="p-4"> 
+              <div className="w-[370px] xl:w-[375px] lg:w-[370px] md:w-[320px] max-sm:w-[340px] ">
+              <div className="h-[375px] relative mb-4 ">
                 <Image className="rounded-xl" src={article.imageUrl} alt={article.title} layout="fill" objectFit="cover" />
               </div>
-              <div className="h-[260px] w-[375px] flex flex-col items-start">
+              <div className="h-[260px] flex flex-col items-start text-white">
                 <h3 className="text-xl font-bold">{article.title}</h3>
-                <p className="text-sm text-gray-700 overflow-hidden text-ellipsis">
+                <p className="text-sm overflow-hidden text-ellipsis">
                   {article.description.slice(0, 200)}...
                 </p>
-                <button className=" mt-auto border border-white text-gray-700 font-bold py-2 px-4 rounded">Read More</button>
+                <Readmore/>
+              </div>
               </div>
             </div>
           ))}

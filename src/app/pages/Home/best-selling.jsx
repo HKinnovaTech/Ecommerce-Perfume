@@ -1,7 +1,7 @@
 'use client'; 
 
 import React from 'react';
-import Cards from './Cards';
+import Cards from '../../components/Cards';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -88,8 +88,8 @@ const BestSelling = () => {
   return (
     <div className="py-20 bg-black justify-center items-center"> {/* Adjusted padding for better spacing */}
       <h2 className="text-4xl lg:text-[52px] text-[#db6e3b] font-bold mb-16 text-center">Best Selling Products</h2>
-      <div className="relative max-w-7xl mx-auto items-center justify-center"> 
-        <Slider {...settings} className="flex items-center justify-center mb-10"> 
+      <div className="relative xl:w-[1300px] lg:w-[800px] md:w-[600px] max-md:w-[500px]  max-sm:w-[350px] sm:w-[400px] mx-auto items-center justify-center"> 
+        <Slider {...settings} className=""> 
           <div><Cards modelName="perfume4.gltf" scale={1.1} /></div>
           <div><Cards modelName="perfume2.gltf" /></div>
           <div><Cards modelName="perfume1.gltf" scale={1.1} /></div>
