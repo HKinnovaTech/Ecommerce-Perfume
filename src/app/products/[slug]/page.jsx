@@ -1,11 +1,14 @@
-import React from 'react'
 
-const page = () => {
-  return (
-    <div>
-      THIS IS SLUG
-    </div>
-  )
-}
+'use client';
 
-export default page
+import React from 'react';
+import { useParams } from 'next/navigation';
+import ProductDetails from './ProductDetails';
+
+const ProductPage = () => {
+  const { slug } = useParams(); // Get the slug from the URL
+
+  return <ProductDetails slug={slug} />;
+};
+
+export default ProductPage;
