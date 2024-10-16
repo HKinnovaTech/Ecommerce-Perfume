@@ -1,6 +1,8 @@
-import React from 'react'
+'use client';
 
+import React from 'react'
 import BestSelling from '../components/Shop/best-selling'
+
 const Shop = () => {
   return (
     <div className="pt-64 flex-col items-center justify-center bg-black">
