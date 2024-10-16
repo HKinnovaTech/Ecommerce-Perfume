@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local"; // Make sure this import is correct
 import "./globals.css"; // Ensure that the path is correct
 import React from "react";
-import Navbar from './pages/navbar'
+import Navbar from './products/navbar'
 
 // Importing custom fonts
 const geistSans = localFont({

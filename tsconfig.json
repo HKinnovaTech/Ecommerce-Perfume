@@ -22,6 +22,6 @@
     },
     "target": "ES2017"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar.jsx", "src/app/components/dropdown.jsx", "src/app/pages/Shop/best-selling.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/navbar.jsx", "src/app/components/dropdown.jsx", "src/app/pages/Shop/best-selling.jsx", "src/app/products/[slug]/page.jsx"],
   "exclude": ["node_modules"]
 }
