@@ -4,7 +4,9 @@ import React from 'react'
 const Buymenu = () => {
   return (
     <div>
+      <Image
       
+      />
     </div>
   )
 }
