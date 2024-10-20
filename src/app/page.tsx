@@ -1,11 +1,13 @@
 import React from 'react';
 import Image from "next/image"; // Only if you're using Image component elsewhere
+
 import HomePage from './products/Home/home';
 import Welcome from './products/Home/welcome'
 import Values from './products/Home/values'
 import BestSelling from './products/Home/best-selling'
 import  Collection  from './products/Home/collections';
 import Articles from './products/Home/latest-articles'
+
 
 const Home = () => {
   return (
