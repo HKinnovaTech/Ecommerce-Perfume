@@ -9,44 +9,60 @@ export default {
       name: 'name',
       title: 'Perfume Name',
       type: 'string',
-      validation: (Rule: Rule) => Rule.required().error('Perfume name is required')
+      validation: (Rule: Rule) => Rule.required().error('Perfume name is required'),
     },
     {
       name: 'image',
       title: 'Perfume Image',
       type: 'image',
       options: {
-        hotspot: true
+        hotspot: true,
       },
-      validation: (Rule: Rule) => Rule.required().error('Perfume image is required')
+      validation: (Rule: Rule) => Rule.required().error('Perfume image is required'),
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96, // Optional: Limit the length of the slug
+      },
+      validation: (Rule: Rule) => Rule.required().error('Slug is required'),
+    },
+    {
+      name: 'description',
+      title: 'Description',
+      type: 'text',
+      validation: (Rule: Rule) => Rule.required().error('Description is required'),
     },
     {
       name: 'rating',
       title: 'Rating',
       type: 'number',
       description: 'Rating of the perfume (out of 5)',
-      validation: (Rule: Rule) => Rule.required().min(0).max(5).precision(1).error('Rating must be between 0 and 5')
+      validation: (Rule: Rule) => Rule.required().min(0).max(5).precision(1).error('Rating must be between 0 and 5'),
     },
     {
       name: 'price',
       title: 'Price',
       type: 'number',
       description: 'Price of the perfume',
-      validation: (Rule: Rule) => Rule.required().min(0).error('Price must be greater than or equal to 0')
+      validation: (Rule: Rule) => Rule.required().min(0).error('Price must be greater than or equal to 0'),
     },
     {
       name: 'quantity',
       title: 'Quantity (ml)',
       type: 'number',
       description: 'Quantity in milliliters (ml)',
-      validation: (Rule: Rule) => Rule.required().min(0).error('Quantity must be greater than or equal to 0 ml')
-    }
+      validation: (Rule: Rule) => Rule.required().min(0).error('Quantity must be greater than or equal to 0 ml'),
+    },
   ],
   preview: {
     select: {
       title: 'name',
       media: 'image',
-      subtitle: 'price'
-    }
-  }
+      subtitle: 'price',
+    },
+  },
 };

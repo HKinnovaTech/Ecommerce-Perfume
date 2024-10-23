@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from "next/image"; // Only if you're using Image component elsewhere
 
-import HomePage from './products/Home/home';
-import Welcome from './products/Home/welcome'
-import Values from './products/Home/values'
-import BestSelling from './products/Home/best-selling'
-import  Collection  from './products/Home/collections';
-import Articles from './products/Home/latest-articles'
+import HomePage from './pages/Home/home';
+import Welcome from './pages/Home/welcome'
+import Values from './pages/Home/values'
+import BestSelling from './pages/Home/best-selling'
+import  Collection  from './pages/Home/collections';
+import Articles from './pages/Home/latest-articles'
 
 
 const Home = () => {

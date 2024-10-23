@@ -1,6 +1,6 @@
-'use client'; // Required for Next.js client-side interactivity
+'use client';
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image'; // Only if you're using Image component elsewhere
+import Image from 'next/image';
 
 const Welcome = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -9,6 +9,8 @@ const Welcome = () => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);

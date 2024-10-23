@@ -3,12 +3,19 @@
 
 import React from 'react';
 import { useParams } from 'next/navigation';
-import ProductDetails from './ProductDetails';
+import ProductDetails from '../../pages/Product-Details/ProductDetails';
+import Reviews from '../../pages/Product-Details/Reviews';
 
 const ProductPage = () => {
   const { slug } = useParams(); // Get the slug from the URL
 
-  return <ProductDetails slug={slug} />;
+  return (
+    <div className='bg-black'>
+    <ProductDetails slug={slug} />
+    <Reviews/>
+    </div>
+  );
+  
 };
 
 export default ProductPage;

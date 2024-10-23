@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react'
-import BestSelling from '../products/Shop/best-selling'
-import Offers from '../products/Shop/Offers'
+import BestSelling from '../pages/Shop/best-selling'
+import Offers from '../pages/Shop/Offers'
 
 const Shop = () => {
   return (

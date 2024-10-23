@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.h2 {
+    font-size: 2.25rem; /* text-4xl for default */
+    color: #db6e3b; /* text-[#db6e3b] */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 2rem; /* mb-16 */
+    text-align: center; /* text-center */
+  }
+  
+  /* Media query for large screens (lg) */
+  @media (min-width: 1024px) {
+    .h2 {
+      font-size: 52px; /* lg:text-[52px] */
+    }
+  }
+  
