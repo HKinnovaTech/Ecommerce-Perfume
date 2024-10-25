@@ -12,7 +12,7 @@ const ProductPage = () => {
   return (
     <div className='bg-black'>
     <ProductDetails slug={slug} />
-    <Reviews/>
+    <Reviews slug={slug}/>
     </div>
   );
   

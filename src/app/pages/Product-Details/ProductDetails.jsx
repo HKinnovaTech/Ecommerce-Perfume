@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { client } from '../../../sanity/lib/client';
 import Image from 'next/image';
 import QuantitySelector from '../../components/QuantitySelector'
+import ProductForm from '../../components/ProductReviewForm';
 
 const ProductDetails = ({ slug }) => {
   const [product, setProduct] = useState(null);
@@ -18,7 +19,8 @@ const ProductDetails = ({ slug }) => {
         rating,
         price,
         quantity,
-        description
+        description,
+        productId
       }`;
 
       const params = { slug }; // Set the slug as a query parameter
@@ -49,7 +51,7 @@ const ProductDetails = ({ slug }) => {
     <div className="p-32 flex flex-col md:flex-row items-start justify-start">
       <div>
       <Image
-      className=""
+      className="max-h-[780px]"
       src={product.imageUrl}
       alt={product.name}
       width={600}
@@ -86,7 +88,7 @@ const ProductDetails = ({ slug }) => {
         </div>
         <p className='text-[#AB572D] text-3xl font-semibold mt-[-6px]'>$ {product.price}.00</p>
         <QuantitySelector/>
-        <button className='bg-gray-300 text-[#AB572D] w-[500px] p-4 rounded-xl text-xl font-bold'>Add to Bag</button>
+        <button className='bg-gray-300 text-[#AB572D] w-[500px] p-3 rounded-xl text-2xl font-bold'>Add to Bag</button>
       </div>
     </div>
     </>

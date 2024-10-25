@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { client } from '../../../sanity/lib/client';
-import Readmore from '../../components/readmore-button';
+import Readmore from '../../components/Cbutton';
 
 import Image from 'next/image';
 

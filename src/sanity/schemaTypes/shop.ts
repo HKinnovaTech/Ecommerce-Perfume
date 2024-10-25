@@ -1,10 +1,17 @@
 import { Rule } from '@sanity/types';
+import { v4 as uuidv4 } from 'uuid';
 
 export default {
   name: 'shop',
   title: 'Shop',
   type: 'document',
   fields: [
+    {
+      name: 'productId',
+      title: 'Product ID',
+      type: 'string',
+      initialValue: () => uuidv4(), 
+    },
     {
       name: 'name',
       title: 'Perfume Name',
@@ -56,6 +63,20 @@ export default {
       type: 'number',
       description: 'Quantity in milliliters (ml)',
       validation: (Rule: Rule) => Rule.required().min(0).error('Quantity must be greater than or equal to 0 ml'),
+    },
+    {
+      name: 'stockStatus',
+      title: 'Stock Status',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'In Stock', value: 'inStock' },
+          { title: 'Out of Stock', value: 'outOfStock' },
+          { title: 'Limited Stock', value: 'limitedStock' },
+        ],
+        layout: 'radio', // Display options as radio buttons
+      },
+      validation: (Rule: Rule) => Rule.required().error('Stock status is required'),
     },
   ],
   preview: {

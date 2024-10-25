@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'; 
 import Image from 'next/image';
 import { client } from '../../../sanity/lib/client';
-import Readmore from '../../components/readmore-button';
+import Readmore from '../../components/Cbutton';
 
 
 const Offers = () => {
