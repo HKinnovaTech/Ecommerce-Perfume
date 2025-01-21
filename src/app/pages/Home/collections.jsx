@@ -51,7 +51,7 @@ const Collections = () => {
                 />
               </div>
             ))}
-            <h2 className="w-full text-[16px] rounded-b-lg md:text-[18px] font-semibold bg-stone-700 text-white text-center p-2 z-20">
+            <h2 className="w-full text-[16px] rounded-b-lg md:text-[18px] font-semibold bg-[#db6e3b] text-white text-center p-2 z-20">
                   {collection.title}
                 </h2>
           </div>

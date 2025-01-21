@@ -33,23 +33,21 @@ const Navbar = () => {
           <li><Link href="/contact" className=" hover:text-[#ff9900]">Contact</Link></li>
         </ul>
 
-        {/* Mobile menu (only visible when open) */}
+        
         {isOpen && (
-          <ul className="absolute z-50 top-16 left-0 w-full text-gray-200 bg-white shadow-md md:hidden text-center opacity-90">
-            <li className="p-4 border-b"><Link href="/" className=" hover:text-[#ff9900]">Home</Link></li>
-            <li className="p-4 border-b"><Link href="/Shop" className=" hover:text-[#ff9900]">Shop</Link></li>
-            <li className="p-4 border-b"><Link href="/services" className=" hover:text-[#ff9900]">Services</Link></li>
-            <li className="p-4 border-b"><Link href="/blog" className=" hover:text-[#ff9900]">Blog</Link></li>
-            <li className="p-4"><Link href="/contact" className=" hover:text-[#ff9900]">Contact</Link></li>
+          <ul className="absolute top-16 left-0 w-full text-white bg-black shadow-lg text-center md:hidden">
+            <li className="p-4 border-b border-gray-700"><Link href="/" className="hover:text-[#ff9900] transition duration-300">Home</Link></li>
+            <li className="p-4 border-b border-gray-700"><Link href="/Shop" className="hover:text-[#ff9900] transition duration-300">Shop</Link></li>
+            <li className="p-4 border-b border-gray-700"><Link href="/services" className="hover:text-[#ff9900] transition duration-300">Services</Link></li>
+            <li className="p-4 border-b border-gray-700"><Link href="/blog" className="hover:text-[#ff9900] transition duration-300">Blog</Link></li>
+            <li className="p-4"><Link href="/contact" className="hover:text-[#ff9900] transition duration-300">Contact</Link></li>
           </ul>
         )}
-
-        {/* Icons Section */}
-        <div className="hidden md:flex space-x-4 lg:space-x-6 text-gray-200">
-          <MagnifyingGlassIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer" />
-          <HeartIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer" />
-          <UserIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer" />
-          <ShoppingCartIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer" />
+        <div className="hidden md:flex space-x-6 text-white">
+          <MagnifyingGlassIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer transition duration-300" />
+          <HeartIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer transition duration-300" />
+          <UserIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer transition duration-300" />
+          <ShoppingCartIcon className="h-6 w-6 hover:text-[#ff9900] cursor-pointer transition duration-300" />
         </div>
       </div>
     </nav>

@@ -5,7 +5,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { product_id, rating, product_review } = req.body;
 
-    // Ensure proper checks for required fields
     if (typeof rating !== 'number' || !product_review || !product_id || rating < 1 || rating > 5) {
       return res.status(400).json({ error: 'Missing required fields or incorrect types' });
     }

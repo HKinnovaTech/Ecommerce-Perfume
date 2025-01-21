@@ -53,7 +53,7 @@ const Articles = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true, // Keep arrows visible by default
+    arrows: true, 
     prevArrow: <LeftArrow />,
     nextArrow: <RightArrow />,
     responsive: [
@@ -73,7 +73,7 @@ const Articles = () => {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          arrows: false, // Disable arrows at 480px breakpoint
+          arrows: false,
         },
       },
     ],

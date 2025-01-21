@@ -7,7 +7,7 @@ import ProductDetails from '../../pages/Product-Details/ProductDetails';
 import Reviews from '../../pages/Product-Details/Reviews';
 
 const ProductPage = () => {
-  const { slug } = useParams(); // Get the slug from the URL
+  const { slug } = useParams(); 
 
   return (
     <div className='bg-black'>

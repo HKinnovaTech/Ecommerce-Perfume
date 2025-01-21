@@ -12,7 +12,7 @@ import Navbar from './components/Navbar';
 const AppRoutes = () => {
   return (
     <Router>
-      <Navbar /> {/* Navbar will be shown on all pages */}
+      <Navbar /> 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<Shop />} />

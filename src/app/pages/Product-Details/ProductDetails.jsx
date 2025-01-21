@@ -10,6 +10,7 @@ import ProductForm from '../../components/ProductReviewForm';
 const ProductDetails = ({ slug }) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -23,7 +24,7 @@ const ProductDetails = ({ slug }) => {
         productId
       }`;
 
-      const params = { slug }; // Set the slug as a query parameter
+      const params = { slug };
       const data = await client.fetch(query, params);
       setProduct(data);
       setLoading(false);
@@ -37,7 +38,7 @@ const ProductDetails = ({ slug }) => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="loader"></div> {/* Your loader component */}
+        <div className="loader"></div> 
       </div>
     );
   }

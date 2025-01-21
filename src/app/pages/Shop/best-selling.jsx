@@ -5,6 +5,7 @@ import SortDropdown from '../../components/dropdown';
 import Searchbar from '../../components/Searchbar';
 import { client } from '../../../sanity/lib/client';
 import ProductCard from '../../components/product-card';
+import PerfumeLoader from '../../components/PerfumeLoader';
 import './styles.css'
 import Link from 'next/link';
 
@@ -83,11 +84,9 @@ const BestSelling = () => {
         <section className="w-[350px] lg:w-[900px] xl:w-[1300px] md:w-[600px] flex-col relative">
          
           <div className="flex justify-between items-center mb-4">
-           {/* Search bar */}
             <div className="flex items-center space-x-2">
                <Searchbar searchQuery={searchQuery} handleSearchChange={handleSearchChange} />
             </div>
-            {/* Dropdown */}
             <div className="flex justify-end relative">
               <SortDropdown />
             </div>
@@ -95,7 +94,7 @@ const BestSelling = () => {
 
           {loading ? (
             <div className="flex justify-center items-center h-64">
-              <div className="loader"></div> {/* You can replace this with your loader component */}
+              <PerfumeLoader/>
             </div>
           ) : (
             <div 
@@ -123,7 +122,7 @@ const BestSelling = () => {
             <button
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
-              className="px-4 py-2 bg-gray-700 text-white rounded-lg disabled:opacity-50"
+              className="px-4 py-2 bg-[#AB572D] hover:bg-[#cc5e27] text-white rounded-lg disabled:opacity-50"
             >
               Previous
             </button>
@@ -131,12 +130,14 @@ const BestSelling = () => {
             <button
               onClick={handleNextPage}
               disabled={currentPage === totalPages}
-              className="px-4 py-2 bg-gray-700 text-white rounded-lg disabled:opacity-50"
+              className="px-4 py-2 bg-[#AB572D] hover:bg-[#cc5e27] text-white rounded-lg disabled:opacity-50"
             >
               Next
             </button>
           </div>
         </section>
+      </div>
+      <div className=" min-h-14 bg-gradient-to-t from-black to-transparent">
       </div>
     </div>
   );

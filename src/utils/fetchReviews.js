@@ -1,4 +1,3 @@
-// utils/fetchReviews.js
 export const fetchReviews = async (productId) => {
     try {
       const response = await fetch(`/api/read-reviews?product_id=${productId}`);

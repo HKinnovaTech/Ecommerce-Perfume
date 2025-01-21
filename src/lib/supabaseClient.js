@@ -2,7 +2,7 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Ensure you include the protocol
-const supabaseUrl = 'https://aevmnlodwqaybapghazj.supabase.co'; // Add 'https://'
+const supabaseUrl = 'https://lmuatxvwkybfmkbckujh.supabase.co'; // Add 'https://'
 const supabaseKey = process.env.SUPABASE_KEY; // Ensure this key is set in your environment variables
 
 // Create the Supabase client

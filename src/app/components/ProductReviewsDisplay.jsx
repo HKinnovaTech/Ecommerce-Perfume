@@ -31,8 +31,10 @@ const DisplayReviews = ({ productId }) => {
                     {reviews.slice(0, visibleReviews).map((review) => ( 
                         <div key={review.id} className='flex mb-12 p-4 w-[1400px] gap-4'>
                             <Image
-                                src={''} // Replace with actual image URL
+                                src={'/images/user.png'}
                                 alt='User'
+                                width={10}
+                                height={10}
                                 className="w-10 h-10 rounded-full mb-2" 
                             />
                             <div className='flex flex-col'>
@@ -52,7 +54,7 @@ const DisplayReviews = ({ productId }) => {
                                 </div>
                                 <p className='my-1'>{review.product_review}</p>
                                 <div className='flex gap-24 mt-2'>
-                                    <p>User Name</p>
+                                    <p className='font-bold'>User Name</p>
                                     <p>{formatDate(review.created_at)}</p>
                                 </div>
                             </div>
@@ -61,7 +63,7 @@ const DisplayReviews = ({ productId }) => {
                     {visibleReviews < reviews.length && (
                         <button
                             onClick={handleViewMore}
-                            className="m-auto border border-gray-400 text-white font-bold py-2 px-4 rounded"
+                            className="m-auto border border-gray-400 hover:border-[#AB572D] text-white font-bold py-2 px-4 rounded"
                         >
                             View More
                         </button>
