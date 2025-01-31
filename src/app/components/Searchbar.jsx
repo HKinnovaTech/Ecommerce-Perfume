@@ -1,11 +1,12 @@
-import React, { useState } from 'react'; // Import useState
-import { BiSearch } from 'react-icons/bi'; // Import BiSearch icon
+import React from 'react';
+import { BiSearch } from 'react-icons/bi';
 
-const Searchbar = ({ searchQuery, handleSearchChange}) => {
+const Searchbar = ({ searchQuery, handleSearchChange, inputRef }) => {
   return (
     <div>
       <div className="relative">
         <input
+          ref={inputRef} // Attach the ref here
           type="text"
           placeholder="Search..."
           value={searchQuery}

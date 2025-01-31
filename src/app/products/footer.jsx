@@ -5,7 +5,9 @@ import { faTwitter, faFacebookF, faLinkedinIn, faInstagram } from '@fortawesome/
 
 const Footer = () => {
   return (
-    <div className="relative flex flex-col lg:flex-row text-white h-auto">
+    <div className='bg-black'>
+      <div className="min-h-10 bg-black blur-lg"></div>
+    <div className="relative flex flex-col lg:flex-row text-white mt-auto h-auto">
       <Image
         src="/images/footer-bg.png"
         alt="Victory Fragrance"
@@ -147,6 +149,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 };
