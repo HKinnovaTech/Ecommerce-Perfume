@@ -14,12 +14,12 @@ const BestSelling = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [transitioning, setTransitioning] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [loading, setLoading] = useState(true); // Add loading state
+  const [loading, setLoading] = useState(true);
   const productsPerPage = 12;
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true); // Set loading to true before fetching data
+      setLoading(true); 
       const query = `*[_type == "shop"]{
         name,
         "imageUrl": image.asset->url,
@@ -30,7 +30,7 @@ const BestSelling = () => {
       }`;
       const data = await client.fetch(query);
       setShops(data);
-      setLoading(false); // Set loading to false after data is fetched
+      setLoading(false); 
     };
 
     fetchData();

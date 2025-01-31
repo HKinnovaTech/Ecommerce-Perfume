@@ -27,14 +27,14 @@ const Collections = () => {
     fetchData();
   }, []);
 
-  const boxStyle = 'p-2 flex flex-col items-center justify-center';
+  const boxStyle = 'p-2 flex flex-col items-center justify-center transition-transform duration-300 ease-out hover:scale-105';
   const body = 'h-[460px] overflow-hidden';
 
   return (
     <div className="bg-black mt-10">
       <div className="w-auto lg:w-[900px] xl:w-[1300px] md:w-[700px] justify-center items-center m-auto relative">
       <h2 className="text-[52px] font-semibold text-[#db6e3b] mb-12 text-center">Our Collection</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto rounded-lg ">
         {collections.map((collection, idx) => (
           <div key={idx} className={`${boxStyle} ${idx === 1 ? 'lg:col-span-2 md:col-span-1 ' : ''}`}>
             <div className="">

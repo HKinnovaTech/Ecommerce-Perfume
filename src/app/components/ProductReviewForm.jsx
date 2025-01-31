@@ -87,7 +87,7 @@ const ProductReviewForm = ({ productId }) => {
           className='w-[1400px] text-white bg-[#3030308f] rounded-md border-none p-2 focus:outline-none focus:ring-2 focus:ring-[#AB572D]'
         />
       </div>
-      <button type="submit" disabled={isSubmitting} className='m-auto border border-gray-400 hover:border-[#AB572D] text-white font-bold py-2 px-4 rounded'>
+      <button type="submit" disabled={isSubmitting} className='m-auto border border-gray-400 hover:border-[#AB572D] text-white font-bold py-2 px-4 rounded mt-4'>
         {isSubmitting ? 'Submitting...' : 'Submit Review'}
       </button>
       </div>

@@ -92,7 +92,7 @@ const Articles = () => {
               </div>
               <div className="h-[260px] flex flex-col items-start text-white">
                 <h3 className="text-xl font-bold">{article.title}</h3>
-                <p className="text-sm overflow-hidden text-ellipsis">
+                <p className="text-sm overflow-hidden text-ellipsis pb-4">
                   {article.description.slice(0, 200)}...
                 </p>
                 <Readmore/>
